@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BYD Dolphin | BYD Bandung</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #172b45;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    padding: 17px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #17365d;
+    font-weight: bold;
+}
+
+.hero {
+    background: #103b70;
+    color: white;
+    padding: 45px 6%;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.label {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #4ccbe8;
+    color: #4ccbe8;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    margin-top: 20px;
+}
+
+.hero h2 {
+    color: #43c8e5;
+    font-size: clamp(20px, 3vw, 30px);
+    margin: 12px 0;
+}
+
+.hero p {
+    color: #d9e7f6;
+    line-height: 1.8;
+    max-width: 680px;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+    margin-top: 28px;
+    border-radius: 14px;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 22px;
+    background: #20b9d5;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 55px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.section-title h2 {
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #77869a;
+    line-height: 1.7;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e5eaf0;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.04);
+}
+
+.card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.price {
+    font-size: 28px;
+    color: #087fc5;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.spec {
+    padding: 13px 0;
+    border-bottom: 1px solid #edf0f4;
+    color: #596a80;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.spec strong {
+    color: #17365d;
+}
+
+.wa-btn {
+    display: block;
+    background: #087fc5;
+    color: white;
+    padding: 14px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 22px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.comparison {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #edf0f4;
+    font-size: 14px;
+}
+
+th {
+    background: #103b70;
+    color: white;
+}
+
+td:first-child {
+    text-align: left;
+    font-weight: bold;
+}
+
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.spec-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e5eaf0;
+}
+
+.spec-card span {
+    display: block;
+    font-size: 12px;
+    color: #7c899a;
+    margin-bottom: 9px;
+}
+
+.spec-card strong {
+    font-size: 19px;
+    color: #103b70;
+}
+
+.highlight {
+    background: white;
+    border-radius: 14px;
+    padding: 30px;
+    line-height: 1.9;
+    margin-top: 25px;
+}
+
+.highlight h3 {
+    margin-bottom: 12px;
+}
+
+.highlight ul {
+    padding-left: 22px;
+    color: #596a80;
+}
+
+.note {
+    margin-top: 15px;
+    color: #8290a2;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.contact {
+    background: #103b70;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #d9e7f6;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.contact a {
+    display: inline-block;
+    background: #20b9d5;
+    color: white;
+    padding: 14px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #78869a;
+    font-size: 13px;
+}
+
+@media(max-width:800px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .spec-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        padding: 40px 15px;
+    }
+
+    .hero {
+        padding: 35px 18px;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+}
+
+@media(max-width:380px) {
+    .price {
+        font-size: 24px;
+    }
+
+    .spec-card strong {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">BYD</div>
+    <a href="index.html"> Kembali ke Beranda</a>
+</header>
+
+<!-- HEADLINE: SATU-SATUNYA BAGIAN DENGAN FOTO -->
+
+<section class="hero">
+    <div class="hero-content">
+
+        <span class="label">100% ELECTRIC HATCHBACK</span>
+
+        <h1>BYD DOLPHIN</h1>
+
+        <h2>DRIVE THE FUTURE</h2>
+
+        <p>
+            Mobil listrik hatchback modern dengan kapasitas
+            5 penumpang. Menghadirkan teknologi canggih,
+            kenyamanan kabin, serta pilihan jarak tempuh
+            untuk kebutuhan mobilitas masa depan.
+        </p>
+
+        <img
+        src="image/dolphin-hero.webp"
+        alt="BYD Dolphin Electric">
+
+        <a href="#tipe" class="hero-btn">
+            LIHAT PILIHAN TIPE 
+        </a>
+
+    </div>
+</section>
+
+<!-- PILIHAN VARIAN -->
+
+<section class="container" id="tipe">
+
+    <div class="section-title">
+        <h2>PILIHAN VARIAN BYD DOLPHIN</h2>
+        <p>Dua pilihan varian dengan performa dan fitur berbeda.</p>
+    </div>
+
+    <div class="products">
+
+        <div class="card">
+
+            <h3>DYNAMIC (STANDARD RANGE)</h3>
+
+            <div class="price">Rp381.000.000</div>
+
+            <div class="spec">
+                Kapasitas Baterai<br>
+                <strong>44,9 kWh Blade Battery</strong>
+            </div>
+
+            <div class="spec">
+                Jarak Tempuh<br>
+                <strong>410 km NEDC / 340 km WLTP</strong>
+            </div>
+
+            <div class="spec">
+                Motor Listrik<br>
+                <strong>70 kW (94 hp / 95 PS)</strong>
+            </div>
+
+            <div class="spec">
+                Torsi Maksimum<br>
+                <strong>180 Nm</strong>
+            </div>
+
+            <div class="spec">
+                Akselerasi 0–100 km/jam<br>
+                <strong>12,3 detik</strong>
+            </div>
+
+            <div class="spec">
+                Suspensi Belakang<br>
+                <strong>Torsion Beam</strong>
+            </div>
+
+            <a class="wa-btn"
+            href="https://wa.me/6289522325077?text=Halo%2C%20saya%20tertarik%20BYD%20Dolphin%20Dynamic"
+            target="_blank">
+                KONSULTASI TIPE DYNAMIC
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <h3>PREMIUM (EXTENDED RANGE)</h3>
+
+            <div class="price">Rp445.000.000</div>
+
+            <div class="spec">
+                Kapasitas Baterai<br>
+                <strong>60,48 kWh Blade Battery</strong>
+            </div>
+
+            <div class="spec">
+                Jarak Tempuh<br>
+                <strong>490 km NEDC / 427 km WLTP</strong>
+            </div>
+
+            <div class="spec">
+                Motor Listrik<br>
+                <strong>150 kW (201 hp / 210 PS)</strong>
+            </div>
+
+            <div class="spec">
+                Torsi Maksimum<br>
+                <strong>310 Nm</strong>
+            </div>
+
+            <div class="spec">
+                Akselerasi 0–100 km/jam<br>
+                <strong>7 detik</strong>
+            </div>
+
+            <div class="spec">
+                Suspensi Belakang<br>
+                <strong>Multi-link</strong>
+            </div>
+
+            <div class="spec">
+                Fitur Tambahan<br>
+                <strong>Jok elektrik, panoramic sunroof,
+                wireless charger, ventilated seats</strong>
+            </div>
+
+            <a class="wa-btn"
+            href="https://wa.me/6289522325077?text=Halo%2C%20saya%20tertarik%20BYD%20Dolphin%20Premium"
+            target="_blank">
+                KONSULTASI PREMIUM
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PERBANDINGAN VARIAN -->
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>PERBANDINGAN SPESIFIKASI</h2>
+        <p>Kenali perbedaan Dynamic dan Premium.</p>
+    </div>
+
+    <div class="comparison">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>SPESIFIKASI</th>
+                    <th>DYNAMIC</th>
+                    <th>PREMIUM</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Harga OTR Bandung</td>
+                    <td>Rp381.000.000</td>
+                    <td>Rp445.000.000</td>
+                </tr>
+
+                <tr>
+                    <td>Kapasitas Baterai</td>
+                    <td>44,9 kWh</td>
+                    <td>60,48 kWh</td>
+                </tr>
+
+                <tr>
+                    <td>Jarak Tempuh NEDC</td>
+                    <td>410 km</td>
+                    <td>490 km</td>
+                </tr>
+
+                <tr>
+                    <td>Jarak Tempuh WLTP</td>
+                    <td>340 km</td>
+                    <td>427 km</td>
+                </tr>
+
+                <tr>
+                    <td>Tenaga Maksimum</td>
+                    <td>70 kW</td>
+                    <td>150 kW</td>
+                </tr>
+
+                <tr>
+                    <td>Torsi Maksimum</td>
+                    <td>180 Nm</td>
+                    <td>310 Nm</td>
+                </tr>
+
+                <tr>
+                    <td>Akselerasi 0–100 km/jam</td>
+                    <td>12,3 detik</td>
+                    <td>7 detik</td>
+                </tr>
+
+                <tr>
+                    <td>Suspensi Belakang</td>
+                    <td>Torsion Beam</td>
+                    <td>Multi-link</td>
+                </tr>
+
+                <tr>
+                    <td>Pengaturan Jok Elektrik</td>
+                    <td>Konfirmasi varian</td>
+                    <td>✓</td>
+                </tr>
+
+                <tr>
+                    <td>Panoramic Sunroof</td>
+                    <td>Konfirmasi varian</td>
+                    <td>✓</td>
+                </tr>
+
+                <tr>
+                    <td>Wireless Smartphone Charger</td>
+                    <td>Konfirmasi varian</td>
+                    <td>✓</td>
+                </tr>
+
+                <tr>
+                    <td>Ventilated Front Seats</td>
+                    <td>Konfirmasi varian</td>
+                    <td>✓</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <p class="note">
+            Geser tabel ke kanan dan kiri untuk melihat
+            seluruh perbandingan.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- DIMENSI DAN PLATFORM -->
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>DIMENSI & PLATFORM</h2>
+        <p>Desain hatchback modern dengan platform khusus kendaraan listrik.</p>
+    </div>
+
+    <div class="spec-grid">
+
+        <div class="spec-card">
+            <span>Platform</span>
+            <strong>e-Platform 3.0</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Panjang</span>
+            <strong>4.290 mm</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Lebar</span>
+            <strong>1.770 mm</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Tinggi</span>
+            <strong>1.570 mm</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Wheelbase</span>
+            <strong>2.700 mm</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Ground Clearance</span>
+            <strong>130 mm</strong>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- INTERIOR DAN TEKNOLOGI -->
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>FITUR INTERIOR & TEKNOLOGI</h2>
+        <p>Kenyamanan dan teknologi pintar dalam satu kabin.</p>
+    </div>
+
+    <div class="highlight">
+
+        <ul>
+            <li>
+                <strong>Intelligent Rotating Touch Screen 12,8 inci:</strong>
+                Layar utama yang dapat diputar dan mendukung
+                Apple CarPlay serta Android Auto.
+            </li>
+
+            <li>
+                <strong>Digital Instrument Cluster 5 inci:</strong>
+                Menampilkan informasi berkendara secara digital.
+            </li>
+
+            <li>
+                <strong>Vegan Leather Seats:</strong>
+                Kursi dengan material vegan leather.
+            </li>
+
+            <li>
+                <strong>Flat Rear Floor:</strong>
+                Lantai belakang rata untuk kenyamanan penumpang.
+            </li>
+
+            <li>
+                <strong>Kapasitas Bagasi:</strong>
+                345 liter dan hingga 1.310 liter ketika
+                jok belakang dilipat dengan konfigurasi 60:40.
+            </li>
+
+            <li>
+                <strong>NFC Key:</strong>
+                Membuka dan mengunci pintu melalui fitur NFC
+                pada spion luar.
+            </li>
+
+            <li>
+                <strong>Vehicle-to-Load (V2L):</strong>
+                Menyalurkan daya listrik kendaraan untuk
+                mengoperasikan perangkat elektronik eksternal.
+            </li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- KESELAMATAN DAN GARANSI -->
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>KESELAMATAN & GARANSI</h2>
+        <p>Perlindungan dan teknologi untuk ketenangan berkendara.</p>
+    </div>
+
+    <div class="spec-grid">
+
+        <div class="spec-card">
+            <span>Airbag</span>
+            <strong>6 Titik</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Kamera</span>
+            <strong>360 Derajat</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>ADAS</span>
+            <strong>Driver Assistance</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Garansi Kendaraan</span>
+            <strong>6 Tahun</strong>
+            <span>150.000 km</span>
+        </div>
+
+        <div class="spec-card">
+            <span>Garansi Blade Battery</span>
+            <strong>8 Tahun</strong>
+            <span>160.000 km</span>
+        </div>
+
+    </div>
+
+    <p class="note">
+        Garansi mengikuti ketentuan resmi BYD dan batas waktu
+        atau jarak tempuh yang tercapai lebih dahulu.
+    </p>
+
+</section>
+
+<!-- WHATSAPP -->
+
+<section class="container">
+
+    <div class="contact">
+
+        <h2>TERTARIK DENGAN BYD DOLPHIN?</h2>
+
+        <p>
+            Konsultasikan harga Bandung, promo,
+            simulasi cicilan, dan jadwalkan test drive.
+        </p>
+
+        <a href="https://wa.me/6289522325077?text=Halo%2C%20saya%20ingin%20konsultasi%20BYD%20Dolphin"
+        target="_blank">
+            HUBUNGI SALES VIA WHATSAPP
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    BYD Bandung | Ilham Akbar
+    <br>
+    WhatsApp 0895-2232-5077
+</footer>
+
+</body>
+</html>

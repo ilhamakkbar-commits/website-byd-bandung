@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Denza D9 | Denza Bandung</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #202c3b;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    padding: 17px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #25364b;
+    font-weight: bold;
+}
+
+.hero {
+    background: #172c3d;
+    color: white;
+    padding: 45px 6%;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.label {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #c6a96b;
+    color: #fdfafa;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 68px);
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    color: #0e0d0d;
+    font-size: clamp(20px, 3vw, 30px);
+    margin: 12px 0;
+}
+
+.hero p {
+    color: #d9e0e7;
+    line-height: 1.8;
+    max-width: 720px;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+    margin-top: 28px;
+    border-radius: 14px;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 22px;
+    background: #fffffe;
+    color: #051a30;
+    padding: 15px 25px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 55px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.section-title h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #7b8795;
+    line-height: 1.7;
+}
+
+.price-card {
+    background: white;
+    max-width: 700px;
+    margin: auto;
+    padding: 32px;
+    border-radius: 15px;
+    border: 1px solid #e5e8ec;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    text-align: center;
+}
+
+.price-card h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: clamp(27px, 5vw, 38px);
+    color: #0e0d0d;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.price-card p {
+    color: #7b8795;
+    font-size: 13px;
+}
+
+.wa-btn {
+    display: inline-block;
+    background: hsl(224, 77%, 28%);
+    color: rgb(253, 252, 252);
+    padding: 14px 23px;
+    border-radius: 7px;
+    text-decoration: none;
+    margin-top: 22px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.spec-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e5e8ec;
+}
+
+.spec-card span {
+    display: block;
+    font-size: 12px;
+    color: #84909e;
+    margin-bottom: 9px;
+}
+
+.spec-card strong {
+    font-size: 20px;
+    color: #25364b;
+    line-height: 1.5;
+}
+
+.highlight {
+    background: white;
+    border-radius: 14px;
+    padding: 28px;
+    border: 1px solid #e5e8ec;
+    line-height: 1.9;
+}
+
+.highlight h3 {
+    margin-bottom: 15px;
+    color: #25364b;
+}
+
+.highlight ul {
+    padding-left: 22px;
+    color: #5e6c7b;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.feature-card {
+    background: white;
+    border: 1px solid #e5e8ec;
+    border-radius: 12px;
+    padding: 23px;
+}
+
+.feature-card h3 {
+    color: #080808;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.feature-card p {
+    color: #687687;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.comparison {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #edf0f3;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background: #172c3d;
+    color: white;
+}
+
+td:first-child {
+    font-weight: bold;
+    color: #25364b;
+}
+
+.note {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #84909e;
+    line-height: 1.7;
+}
+
+.contact {
+    background: #172c3d;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #d9e0e7;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.contact a {
+    display: inline-block;
+    background: #faf9f9;
+    color: #172c3d;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #7b8795;
+    font-size: 13px;
+}
+
+@media(max-width:800px) {
+    .spec-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 40px 15px;
+    }
+
+    .hero {
+        padding: 35px 18px;
+    }
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 23px;
+    }
+}
+
+@media(max-width:380px) {
+    .spec-card strong {
+        font-size: 17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+    <div class="logo">DENZA</div>
+    <a href="index.html"> Kembali ke Beranda</a>
+</header>
+
+<!-- HEADLINE -->
+
+<section class="hero">
+    <div class="hero-content">
+
+        <span class="label">PREMIUM ELECTRIC MPV</span>
+
+        <h1>DENZA D9</h1>
+
+        <h2>THE LUXURY OF TOMORROW</h2>
+
+        <p>
+            MPV listrik premium dengan desain elegan,
+            teknologi masa depan, dan kenyamanan kelas atas.
+            Dilengkapi konfigurasi 7 penumpang serta
+            berbagai fitur eksklusif untuk pengalaman
+            perjalanan yang lebih istimewa.
+        </p>
+
+        <img
+        src="image/denza-d9.webp"
+        alt="Denza D9">
+
+        <a href="#harga" class="hero-btn">
+            LIHAT DETAIL DENZA D9 
+        </a>
+
+    </div>
+</section>
+
+<!-- HARGA -->
+
+<section class="container" id="harga">
+
+    <div class="section-title">
+        <h2>HARGA DENZA D9</h2>
+        <p>Harga On The Road Bandung</p>
+    </div>
+
+    <div class="price-card">
+
+        <h3>DENZA D9</h3>
+
+        <div class="price">Rp1.092.000.000</div>
+
+        <p>Harga OTR Bandung</p>
+
+        <a class="wa-btn"
+        href="https://wa.me/6289522325077?text=Halo%2C%20saya%20tertarik%20dengan%20Denza%20D9"
+        target="_blank">
+            TANYA HARGA VIA WHATSAPP
+        </a>
+
+    </div>
+
+</section>
+
+<!-- SPESIFIKASI UTAMA -->
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>SPESIFIKASI UTAMA</h2>
+        <p>Dimensi besar dengan teknologi kendaraan listrik premium.</p>
+    </div>
+
+    <div class="spec-grid">
+
+        <div class="spec-card">
+            <span>Panjang</span>
+            <strong>5.250 mm</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Lebar</span>
+            <strong>1.960 mm</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Tinggi</span>
+            <strong>1.920 mm</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Wheelbase</span>
+            <strong>3.110 mm</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Kapasitas Penumpang</span>
+            <strong>7 Orang</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Platform</span>
+            <strong>BYD Electric Platform</strong>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PERFORMA -->
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>PERFORMA & TENAGA</h2>
+        <p>Performa bertenaga untuk perjalanan premium.</p>
+    </div>
+
+    <div class="spec-grid">
+
+        <div class="spec-card">
+            <span>Tenaga Maksimum</span>
+            <strong>340 kW</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Tenaga Horsepower</span>
+            <strong>456 HP / 462 PS</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Torsi Maksimum</span>
+            <strong>Belum dicantumkan</strong>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BATERAI -->
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>BLADE BATTERY GENERASI KEDUA</h2>
+        <p>Teknologi baterai untuk jarak tempuh lebih jauh.</p>
+    </div>
+
+    <div class="spec-grid">
+
+        <div class="spec-card">
+            <span>Teknologi Baterai</span>
+            <strong>BYD Blade Battery Gen 2</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Kapasitas Baterai</span>
+            <strong>±115 kWh</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Jarak Tempuh</span>
+            <strong>Hingga 730 km</strong>
+        </div>
+
+    </div>
+
+    <p class="note">
+        Jarak tempuh mengikuti metode pengujian dan konfigurasi
+        kendaraan yang digunakan.
+    </p>
+
+</section>
+
+<!-- FLASH CHARGING -->
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>TEKNOLOGI FLASH CHARGING</h2>
+        <p>Pengisian daya berkecepatan tinggi dengan teknologi Tcharge.</p>
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <h3>10% – 70%</h3>
+            <p>
+                Pengisian daya diklaim dapat berlangsung
+                sekitar 5 menit.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Pengisian Penuh</h3>
+            <p>
+                Pengisian baterai diklaim dapat mencapai
+                sekitar 9 menit.
+            </p>
+        </div>
+
+    </div>
+
+    <p class="note">
+        Waktu pengisian merupakan klaim teknologi pengisian
+        khusus dan bergantung pada infrastruktur charger,
+        kondisi baterai, serta kondisi operasional.
+    </p>
+
+</section>
+
+<!-- KABIN -->
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>KEMEWAHAN KABIN DENZA D9</h2>
+        <p>Dirancang untuk kenyamanan seluruh penumpang.</p>
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <h3>7-Seater Configuration</h3>
+            <p>
+                Konfigurasi kabin 7 penumpang yang memberikan
+                ruang nyaman untuk perjalanan bersama keluarga.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Electronic Sliding Door</h3>
+            <p>
+                Pintu geser elektrik untuk akses masuk
+                dan keluar kabin yang lebih praktis.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Electric Captain Seat</h3>
+            <p>
+                Kursi baris kedua model captain seat
+                dengan pengaturan elektrik.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>10-Point Massage</h3>
+            <p>
+                Fitur pijat 10 titik pada kursi baris kedua
+                untuk menunjang kenyamanan perjalanan.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Dual Wireless Charging 50W</h3>
+            <p>
+                Pengisian daya smartphone secara nirkabel
+                dengan daya hingga 50 watt.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Refrigerator Baris Kedua</h3>
+            <p>
+                Kulkas di area baris kedua untuk memberikan
+                kemudahan selama perjalanan.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Panoramic Sunroof</h3>
+            <p>
+                Atap panoramic yang memberikan kesan
+                kabin lebih luas dan terbuka.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Layar Head Unit Besar</h3>
+            <p>
+                Sistem layar hiburan modern untuk
+                menunjang pengalaman di dalam kabin.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- KESELAMATAN -->
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>KESELAMATAN & TEKNOLOGI</h2>
+        <p>Perlindungan dan bantuan berkendara modern.</p>
+    </div>
+
+    <div class="spec-grid">
+
+        <div class="spec-card">
+            <span>Sistem Keselamatan</span>
+            <strong>ADAS</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Airbag</span>
+            <strong>9 SRS Airbag</strong>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- RINGKASAN -->
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>KENAPA MEMILIH DENZA D9?</h2>
+    </div>
+
+    <div class="highlight">
+
+        <ul>
+            <li>MPV listrik premium dengan kapasitas 7 penumpang.</li>
+            <li>Blade Battery generasi kedua sekitar 115 kWh.</li>
+            <li>Jarak tempuh hingga 730 km.</li>
+            <li>Teknologi Flash Charging Tcharge.</li>
+            <li>Captain Seat elektrik dengan pijat 10 titik.</li>
+            <li>Electronic Sliding Door.</li>
+            <li>Dual Wireless Charging 50W.</li>
+            <li>Panoramic Sunroof dan kulkas baris kedua.</li>
+            <li>ADAS dan 9 SRS Airbag.</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- WHATSAPP -->
+
+<section class="container">
+
+    <div class="contact">
+
+        <h2>TERTARIK DENGAN DENZA D9?</h2>
+
+        <p>
+            Konsultasikan harga OTR Bandung,
+            promo, simulasi pembelian,
+            dan jadwalkan test drive.
+        </p>
+
+        <a href="https://wa.me/6289522325077?text=Halo%2C%20saya%20ingin%20konsultasi%20Denza%20D9"
+        target="_blank">
+            HUBUNGI SALES VIA WHATSAPP
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    Denza Bandung | Ilham Akbar
+    <br>
+    WhatsApp 0895-2232-5077
+</footer>
+
+</body>
+</html>

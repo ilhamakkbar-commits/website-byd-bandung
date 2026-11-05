@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BYD M6 DM | BYD Bandung</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #172b45;
+    background: #f5f7fa;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    padding: 17px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #17365d;
+    font-weight: bold;
+}
+
+.hero {
+    background: #102e55;
+    color: white;
+    padding: 35px 6% 45px;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero-label {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #49c5e5;
+    border-radius: 30px;
+    color: #55d5ed;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 6vw, 65px);
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    color: #39c6e6;
+    font-size: clamp(19px, 3vw, 30px);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #d5e4f4;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+    margin-top: 28px;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 23px;
+    padding: 15px 25px;
+    background: #20b9d5;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 55px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.section-title h2 {
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #75849a;
+    line-height: 1.6;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 13px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e5eaf0;
+    border-radius: 13px;
+    padding: 20px 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,.04);
+}
+
+.card h3 {
+    font-size: 16px;
+    min-height: 40px;
+    line-height: 1.4;
+}
+
+.price {
+    color: #087fc5;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.spec {
+    border-bottom: 1px solid #edf0f4;
+    padding: 11px 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #53647a;
+}
+
+.spec strong {
+    color: #17365d;
+}
+
+.wa-btn {
+    display: block;
+    background: #087fc5;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 8px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+.comparison {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 5px 20px rgba(0,0,0,.04);
+}
+
+table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e9edf2;
+    text-align: center;
+    font-size: 13px;
+}
+
+th {
+    background: #103b70;
+    color: white;
+}
+
+td:first-child {
+    text-align: left;
+    font-weight: bold;
+    color: #17365d;
+}
+
+.yes {
+    color: #079b70;
+    font-weight: bold;
+}
+
+.no {
+    color: #d94141;
+    font-weight: bold;
+}
+
+.table-note {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #8290a2;
+    line-height: 1.6;
+}
+
+.highlight {
+    background: white;
+    border-radius: 14px;
+    padding: 30px;
+    margin-top: 35px;
+    line-height: 1.8;
+}
+
+.highlight h2 {
+    margin-bottom: 12px;
+}
+
+.highlight ul {
+    padding-left: 22px;
+    color: #596a80;
+}
+
+.contact {
+    background: #103b70;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.contact h2 {
+    font-size: 27px;
+    margin-bottom: 13px;
+}
+
+.contact p {
+    color: #d9e8f6;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.contact a {
+    display: inline-block;
+    background: #19b9d4;
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #7b899b;
+    font-size: 13px;
+}
+
+@media(max-width: 1050px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 38px 15px;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    .card h3 {
+        min-height: auto;
+    }
+
+    .hero {
+        padding: 30px 18px;
+    }
+
+    .comparison {
+        padding: 12px;
+    }
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">BYD</div>
+    <a href="index.html">← Kembali ke Beranda</a>
+</header>
+
+<!-- HEADLINE -->
+
+<section class="hero">
+    <div class="hero-content">
+
+        <span class="hero-label">
+            DUAL MODE TECHNOLOGY
+        </span>
+
+        <h1>BYD M6 DM</h1>
+
+        <h2>BISA ISI BENSIN, BISA ISI LISTRIK</h2>
+
+        <p>
+            Plug-in Hybrid MPV untuk perjalanan dalam kota
+            maupun perjalanan jarak jauh. Nikmati fleksibilitas
+            berkendara dengan teknologi listrik dan bensin.
+        </p>
+
+        <img
+        src="image/m6dm-hero.webp"
+        alt="BYD M6 DM sedang charging dan mengisi bensin">
+
+        </a>
+
+    </div>
+</section>
+
+<!-- PILIHAN TIPE -->
+
+<section class="container" id="tipe">
+
+    <div class="section-title">
+        <h2>PILIH BYD M6 DM ANDA</h2>
+        <p>Lima pilihan varian dengan fitur dan kenyamanan berbeda.</p>
+    </div>
+
+    <div class="products">
+
+        <div class="card">
+            <h3>CLASSIC STANDARD</h3>
+            <div class="price">Rp307.900.000</div>
+
+            <div class="spec">
+                Baterai<br><strong>7,4 kWh</strong>
+            </div>
+            <div class="spec">
+                EV Range<br><strong>45 km</strong>
+            </div>
+            <div class="spec">
+                Penumpang<br><strong>7 orang</strong>
+            </div>
+
+            <a class="wa-btn"
+            href="https://wa.me/6289522325077?text=Halo%2C%20saya%20tertarik%20BYD%20M6%20DM%20Classic%20Standard"
+            target="_blank">Konsultasi BYD M6 DM</a>
+        </div>
+
+        <div class="card">
+            <h3>CLASSIC DYNAMIC</h3>
+            <div class="price">Rp327.900.000</div>
+
+            <div class="spec">
+                Baterai<br><strong>7,4 kWh</strong>
+            </div>
+            <div class="spec">
+                EV Range<br><strong>45 km</strong>
+            </div>
+            <div class="spec">
+                Penumpang<br><strong>7 orang</strong>
+            </div>
+
+            <a class="wa-btn"
+            href="https://wa.me/6289522325077?text=Halo%2C%20saya%20tertarik%20BYD%20M6%20DM%20Classic%20Dynamic"
+            target="_blank">Konsultasi BYD M6 DM</a>
+        </div>
+
+        <div class="card">
+            <h3>CROSS ADVANCE</h3>
+            <div class="price">Rp369.900.000</div>
+
+            <div class="spec">
+                Baterai<br><strong>18,3 kWh</strong>
+            </div>
+            <div class="spec">
+                EV Range<br><strong>100 km</strong>
+            </div>
+            <div class="spec">
+                Penumpang<br><strong>7 orang</strong>
+            </div>
+
+            <a class="wa-btn"
+            href="https://wa.me/6289522325077?text=Halo%2C%20saya%20tertarik%20BYD%20M6%20DM%20Cross%20Advance"
+            target="_blank">Konsultasi BYD M6 DM</a>
+        </div>
+
+        <div class="card">
+            <h3>CROSS SUPERIOR</h3>
+            <div class="price">Rp389.900.000</div>
+
+            <div class="spec">
+                Baterai<br><strong>18,3 kWh</strong>
+            </div>
+            <div class="spec">
+                EV Range<br><strong>100 km</strong>
+            </div>
+            <div class="spec">
+                Penumpang<br><strong>7 orang</strong>
+            </div>
+
+            <a class="wa-btn"
+            href="https://wa.me/6289522325077?text=Halo%2C%20saya%20tertarik%20BYD%20M6%20DM%20Cross%20Superior"
+            target="_blank">Konsultasi BYD M6 DM</a>
+        </div>
+
+        <div class="card">
+            <h3>CROSS SUPERIOR CAPTAIN SEAT</h3>
+            <div class="price">Rp399.900.000</div>
+
+            <div class="spec">
+                Baterai<br><strong>18,3 kWh</strong>
+            </div>
+            <div class="spec">
+                EV Range<br><strong>100 km</strong>
+            </div>
+            <div class="spec">
+                Penumpang<br><strong>6 orang</strong>
+            </div>
+
+            <a class="wa-btn"
+            href="https://wa.me/6289522325077?text=Halo%2C%20saya%20tertarik%20BYD%20M6%20DM%20Cross%20Superior%20Captain%20Seat"
+            target="_blank">Konsultasi BYD M6 DM</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PERBANDINGAN FITUR -->
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>PERBANDINGAN FITUR</h2>
+        <p>Kenali perbedaan kelima varian BYD M6 DM.</p>
+    </div>
+
+    <div class="comparison">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>FITUR</th>
+                    <th>CLASSIC<br>STANDARD</th>
+                    <th>CLASSIC<br>DYNAMIC</th>
+                    <th>CROSS<br>ADVANCE</th>
+                    <th>CROSS<br>SUPERIOR</th>
+                    <th>SUPERIOR<br>CAPTAIN SEAT</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Harga Bandung</td>
+                    <td>307,9 jt</td>
+                    <td>327,9 jt</td>
+                    <td>369,9 jt</td>
+                    <td>389,9 jt</td>
+                    <td>399,9 jt</td>
+                </tr>
+
+                <tr>
+                    <td>Kapasitas Baterai</td>
+                    <td>7,4 kWh</td>
+                    <td>7,4 kWh</td>
+                    <td>18,3 kWh</td>
+                    <td>18,3 kWh</td>
+                    <td>18,3 kWh</td>
+                </tr>
+
+                <tr>
+                    <td>Jarak Tempuh EV</td>
+                    <td>45 km</td>
+                    <td>45 km</td>
+                    <td>100 km</td>
+                    <td>100 km</td>
+                    <td>100 km</td>
+                </tr>
+
+                <tr>
+                    <td>Kapasitas Penumpang</td>
+                    <td>7 orang</td>
+                    <td>7 orang</td>
+                    <td>7 orang</td>
+                    <td>7 orang</td>
+                    <td>6 orang</td>
+                </tr>
+
+                <tr>
+                    <td>Spion Lipat Elektrik</td>
+                    <td class="no">✕</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                </tr>
+
+                <tr>
+                    <td>NFC Card</td>
+                    <td class="no">✕</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                </tr>
+
+                <tr>
+                    <td>Voice Command</td>
+                    <td class="no">✕</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                </tr>
+
+                <tr>
+                    <td>BYD App</td>
+                    <td class="no">✕</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                </tr>
+
+                <tr>
+                    <td>Koneksi 4G</td>
+                    <td class="no">✕</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                </tr>
+
+                <tr>
+                    <td>Roof Rack</td>
+                    <td class="no">✕</td>
+                    <td class="no">✕</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                </tr>
+
+                <tr>
+                    <td>Fender</td>
+                    <td class="no">✕</td>
+                    <td class="no">✕</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                </tr>
+
+                <tr>
+                    <td>Panel Instrumen</td>
+                    <td>Analog</td>
+                    <td>Analog</td>
+                    <td>Digital</td>
+                    <td>Digital</td>
+                    <td>Digital</td>
+                </tr>
+
+                <tr>
+                    <td>Head Unit</td>
+                    <td>10,1 inci</td>
+                    <td>10,1 inci</td>
+                    <td>12,8 inci</td>
+                    <td>12,8 inci</td>
+                    <td>12,8 inci</td>
+                </tr>
+
+                <tr>
+                    <td>Material Jok</td>
+                    <td>Fabric hitam</td>
+                    <td>Fabric hitam</td>
+                    <td>Synthetic leather</td>
+                    <td>Synthetic leather</td>
+                    <td>Captain seat</td>
+                </tr>
+
+                <tr>
+                    <td>Pengaturan Kursi</td>
+                    <td>Manual</td>
+                    <td>Manual</td>
+                    <td>Elektrik</td>
+                    <td>Elektrik</td>
+                    <td>Elektrik</td>
+                </tr>
+
+                <tr>
+                    <td>Ukuran Velg</td>
+                    <td>16 inci</td>
+                    <td>16 inci</td>
+                    <td>17 inci</td>
+                    <td>17 inci</td>
+                    <td>17 inci</td>
+                </tr>
+
+                <tr>
+                    <td>AC & DC Charging</td>
+                    <td>AC</td>
+                    <td>AC</td>
+                    <td>AC & DC</td>
+                    <td>AC & DC</td>
+                    <td>AC & DC</td>
+                </tr>
+
+                <tr>
+                    <td>Kamera</td>
+                    <td>Belakang</td>
+                    <td>360°</td>
+                    <td>360°</td>
+                    <td>360°</td>
+                    <td>360°</td>
+                </tr>
+
+                <tr>
+                    <td>ADAS</td>
+                    <td class="no">✕</td>
+                    <td class="no">✕</td>
+                    <td class="no">✕</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                </tr>
+
+                <tr>
+                    <td>Electric Tailgate</td>
+                    <td class="no">✕</td>
+                    <td class="no">✕</td>
+                    <td class="no">✕</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                </tr>
+
+                <tr>
+                    <td>Wireless Charging</td>
+                    <td class="no">✕</td>
+                    <td class="no">✕</td>
+                    <td class="no">✕</td>
+                    <td class="yes">✓</td>
+                    <td class="yes">✓</td>
+                </tr>
+
+                <tr>
+                    <td>Panoramic Glass Roof</td>
+                    <td class="no">✕</td>
+                    <td class="no">✕</td>
+                    <td class="no">✕</td>
+                    <td class="no">✕</td>
+                    <td class="yes">✓</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <p class="table-note">
+            Geser tabel ke kanan dan kiri untuk melihat seluruh
+            perbedaan fitur. Spesifikasi mengikuti poster referensi
+            BYD M6 DM Bandung yang diberikan.
+        </p>
+
+    </div>
+
+    <div class="highlight">
+
+        <h2>MENGAPA MEMILIH BYD M6 DM?</h2>
+
+        <ul>
+            <li>Bisa menggunakan tenaga listrik dan bensin.</li>
+            <li>Plug-in Hybrid untuk fleksibilitas berkendara.</li>
+            <li>Kabin luas untuk kebutuhan keluarga.</li>
+            <li>Tersedia pilihan 7 penumpang dan Captain Seat 6 penumpang.</li>
+            <li>Pilihan fitur berbeda sesuai kebutuhan dan budget.</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- WHATSAPP -->
+
+<section class="container">
+
+    <div class="contact">
+
+        <h2>TERTARIK DENGAN BYD M6 DM?</h2>
+
+        <p>
+            Konsultasikan harga area Bandung, promo,
+            simulasi cicilan, dan jadwalkan test drive.
+        </p>
+
+        <a href="https://wa.me/6289522325077?text=Halo%2C%20saya%20ingin%20konsultasi%20BYD%20M6%20DM"
+        target="_blank">
+            HUBUNGI SALES VIA WHATSAPP
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    BYD Bandung | Ilham Akbar
+    <br>
+    WhatsApp 0895-2232-5077
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BYD Atto 3 | BYD Bandung</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #172b45;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    padding: 17px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #17365d;
+    font-weight: bold;
+}
+
+.hero {
+    background: #103b70;
+    color: white;
+    padding: 45px 6%;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.label {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #4ccbe8;
+    color: #4ccbe8;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    margin-top: 20px;
+}
+
+.hero h2 {
+    color: #43c8e5;
+    font-size: clamp(20px, 3vw, 30px);
+    margin: 12px 0;
+}
+
+.hero p {
+    color: #d9e7f6;
+    line-height: 1.8;
+    max-width: 680px;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+    margin-top: 28px;
+    border-radius: 14px;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 22px;
+    background: #20b9d5;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 55px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.section-title h2 {
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #77869a;
+    line-height: 1.7;
+}
+
+.price-card {
+    background: white;
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e5eaf0;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    text-align: center;
+}
+
+.price-card h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 32px;
+    color: #087fc5;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.price-details {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 12px;
+}
+
+.price-item {
+    background: #f3f7fb;
+    padding: 17px 10px;
+    border-radius: 9px;
+}
+
+.price-item strong {
+    display: block;
+    font-size: 20px;
+    color: #103b70;
+    margin-top: 7px;
+}
+
+.price-item span {
+    font-size: 12px;
+    color: #78869a;
+}
+
+.wa-btn {
+    display: inline-block;
+    background: #087fc5;
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 23px;
+}
+
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+
+.spec-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e5eaf0;
+}
+
+.spec-card span {
+    display: block;
+    font-size: 12px;
+    color: #7c899a;
+    margin-bottom: 9px;
+}
+
+.spec-card strong {
+    font-size: 20px;
+    color: #103b70;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #e5eaf0;
+}
+
+.feature-card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+}
+
+.feature-text {
+    padding: 20px;
+}
+
+.feature-text h3 {
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.feature-text p {
+    color: #66768b;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.comparison {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #edf0f4;
+    font-size: 14px;
+}
+
+th {
+    background: #103b70;
+    color: white;
+}
+
+td:first-child {
+    text-align: left;
+    font-weight: bold;
+}
+
+.note {
+    margin-top: 15px;
+    color: #8290a2;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.highlight {
+    background: white;
+    border-radius: 14px;
+    padding: 30px;
+    line-height: 1.8;
+    margin-top: 30px;
+}
+
+.highlight ul {
+    padding-left: 22px;
+    color: #596a80;
+}
+
+.contact {
+    background: #103b70;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #d9e7f6;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.contact a {
+    display: inline-block;
+    background: #20b9d5;
+    color: white;
+    padding: 14px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #78869a;
+    font-size: 13px;
+}
+
+@media(max-width:800px) {
+    .spec-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 40px 15px;
+    }
+
+    .hero {
+        padding: 35px 18px;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+}
+
+@media(max-width:380px) {
+    .price {
+        font-size: 26px;
+    }
+
+    .spec-card strong {
+        font-size: 17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">BYD</div>
+    <a href="index.html">Kembali ke Beranda</a>
+</header>
+
+<!-- HEADLINE -->
+
+<section class="hero">
+    <div class="hero-content">
+
+        <span class="label">100% ELECTRIC SUV</span>
+
+        <h1>BYD ATTO 3</h1>
+
+        <h2>DRIVE THE FUTURE</h2>
+
+        <p>
+            SUV listrik modern dengan teknologi e-Platform 3.0.
+            Menghadirkan performa responsif, desain futuristik,
+            kabin nyaman, dan teknologi keselamatan canggih
+            untuk perjalanan bersama keluarga.
+        </p>
+
+        <img
+        src="image/atto3.webp"
+        alt="BYD Atto 3">
+
+        <a href="#harga" class="hero-btn">
+            LIHAT SPESIFIKASI 
+        </a>
+
+    </div>
+</section>
+
+<!-- HARGA -->
+
+<section class="container" id="harga">
+
+    <div class="section-title">
+        <h2>BYD ATTO 3 ADVANCED</h2>
+        <p>Harga OTR Bandung</p>
+    </div>
+
+    <div class="price-card">
+
+        <h3>ATTO 3 ADVANCED</h3>
+
+        <div class="price">Rp425.000.000</div>
+
+        <div class="price-details">
+
+            <div class="price-item">
+                <span>Kapasitas Baterai</span>
+                <strong>49,92 kWh</strong>
+            </div>
+
+            <div class="price-item">
+                <span>Jarak Tempuh</span>
+                <strong>410 km</strong>
+            </div>
+
+        </div>
+
+        <a class="wa-btn"
+        href="https://wa.me/6289522325077?text=Halo%2C%20saya%20tertarik%20BYD%20Atto%203%20Advanced"
+        target="_blank">
+            KONSULTASI VIA WHATSAPP
+        </a>
+
+    </div>
+
+</section>
+
+<!-- SPESIFIKASI UTAMA -->
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>SPESIFIKASI UTAMA</h2>
+        <p>Kenali performa dan dimensi BYD Atto 3.</p>
+    </div>
+
+    <div class="spec-grid">
+
+        <div class="spec-card">
+            <span>Panjang</span>
+            <strong>4.455 mm</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Lebar</span>
+            <strong>1.875 mm</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Tinggi</span>
+            <strong>1.615 mm</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Wheelbase</span>
+            <strong>2.720 mm</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Ground Clearance</span>
+            <strong>175 mm</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Kapasitas Penumpang</span>
+            <strong>5 Orang</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Tenaga Maksimum</span>
+            <strong>204 hp</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Torsi Maksimum</span>
+            <strong>310 Nm</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Akselerasi 0–100 km/jam</span>
+            <strong>7,9 Detik</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Kecepatan Maksimum</span>
+            <strong>160 km/jam</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Sistem Penggerak</span>
+            <strong>FWD</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Jenis Motor</span>
+            <strong>Permanent Magnet</strong>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- INTERIOR -->
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>INTERIOR & FITUR UNGGULAN</h2>
+        <p>Teknologi dan kenyamanan untuk pengalaman berkendara modern.</p>
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <img
+            src="image/atto3-interior.webp"
+            alt="Interior BYD Atto 3">
+
+            <div class="feature-text">
+                <h3>Touchscreen 15,6 Inci</h3>
+                <p>
+                    Layar sentuh utama bisa android dan apple car 
+                </p>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <img
+            src="image/atto3-sunroof.webp"
+            alt="Panoramic Sunroof BYD Atto 3">
+
+            <div class="feature-text">
+                <h3>Panoramic Sunroof</h3>
+                <p>
+                    Memberikan kesan kabin lebih luas
+                    dengan pemandangan langit yang lebih terbuka.
+                </p>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <img
+            src="image/atto3-guitar.webp"
+            alt="Desain interior pintu BYD Atto 3">
+
+            <div class="feature-text">
+                <h3>Desain Interior Unik</h3>
+                <p>
+                    Trim pintu dengan desain menyerupai
+                    senar gitar yang memberikan karakter khas.
+                </p>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <img
+            src="image/atto3-wireless.webp"
+            alt="Wireless Charging BYD Atto 3">
+
+            <div class="feature-text">
+                <h3>Wireless Smartphone Charging</h3>
+                <p>
+                    Mengisi daya smartphone dengan praktis
+                    tanpa perlu menggunakan kabel.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="highlight">
+        <h3>FITUR KENYAMANAN LAINNYA</h3>
+        <ul>
+            <li>Automatic Climate Control.</li>
+            <li>Kabin modern dan ergonomis.</li>
+            <li>Kapasitas 5 penumpang.</li>
+        </ul>
+    </div>
+
+</section>
+
+<!-- KESELAMATAN -->
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>KESELAMATAN & ADAS</h2>
+        <p>Teknologi keselamatan untuk mendukung perjalanan lebih percaya diri.</p>
+    </div>
+
+    <div class="spec-grid">
+
+        <div class="spec-card">
+            <span>Airbag</span>
+            <strong>6–7 Airbag</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Sistem Pengereman</span>
+            <strong>ABS</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Stabilitas Elektronik</span>
+            <strong>ESP</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Lane Keeping Assist</span>
+            <strong>LKA</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Adaptive Cruise Control</span>
+            <strong>ACC</strong>
+        </div>
+
+        <div class="spec-card">
+            <span>Kamera Parkir</span>
+            <strong>360 Derajat</strong>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PERFORMA -->
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>PERFORMA & TEKNOLOGI</h2>
+    </div>
+
+    <div class="highlight">
+
+        <h3>e-Platform 3.0</h3>
+
+        <p>
+            BYD Atto 3 menggunakan teknologi e-Platform 3.0
+            dengan motor listrik Permanent Magnet Synchronous Motor
+            dan sistem penggerak roda depan (FWD).
+        </p>
+
+        <br>
+
+        <ul>
+            <li>Tenaga 204 hp (150 kW).</li>
+            <li>Torsi 310 Nm.</li>
+            <li>Akselerasi 0–100 km/jam dalam 7,9 detik.</li>
+            <li>Kecepatan maksimum 160 km/jam.</li>
+            <li>Baterai berkapasitas 49,92 kWh.</li>
+            <li>Jarak tempuh hingga 410 km berdasarkan data NEDC.</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- WHATSAPP -->
+
+<section class="container">
+
+    <div class="contact">
+
+        <h2>TERTARIK DENGAN BYD ATTO 3?</h2>
+
+        <p>
+            Konsultasikan harga Bandung, promo,
+            simulasi cicilan, dan jadwalkan test drive.
+        </p>
+
+        <a href="https://wa.me/6289522325077?text=Halo%2C%20saya%20ingin%20konsultasi%20BYD%20Atto%203"
+        target="_blank">
+            HUBUNGI SALES VIA WHATSAPP
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    BYD Bandung | Ilham Akbar
+    <br>
+    WhatsApp 0895-2232-5077
+</footer>
+
+</body>
+</html>

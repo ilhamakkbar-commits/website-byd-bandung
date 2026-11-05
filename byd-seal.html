@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BYD Seal | Sedan Listrik Premium</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #172c3d;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    background: #ffffff;
+    min-height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.navbar .brand {
+    color: #123b68;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.navbar .back {
+    color: #172c3d;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .back:hover {
+    color: #087fc5;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(120deg, #081c35, #07599b, #087fc5);
+    color: white;
+    padding: 50px 0;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-label {
+    display: inline-block;
+    border: 1px solid #45c5e5;
+    color: #ffffff;
+    padding: 6px 17px;
+    border-radius: 30px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 54px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+}
+
+.hero h2 {
+    color: #45d3f2;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.hero-description {
+    max-width: 700px;
+    font-size: 15px;
+    color: #e8f3ff;
+    margin-bottom: 25px;
+}
+
+.hero img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    margin: 25px auto;
+}
+
+.price-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 850px;
+}
+
+.price-card {
+    background: #ffffff;
+    color: #172c3d;
+    padding: 20px;
+    border-radius: 13px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+}
+
+.price-card span {
+    display: block;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.price-card h3 {
+    color: #087fc5;
+    font-size: 25px;
+    margin: 5px 0 14px;
+}
+
+.wa-button {
+    display: inline-block;
+    background: #087fc5;
+    color: white;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.wa-button:hover {
+    background: #075b99;
+}
+
+/* SECTION */
+section {
+    padding: 45px 0;
+}
+
+.section-title {
+    text-align: center;
+    color: #123b68;
+    font-size: 29px;
+    margin-bottom: 8px;
+}
+
+.section-desc {
+    text-align: center;
+    color: #64748b;
+    margin: 0 auto 25px;
+    max-width: 750px;
+    font-size: 15px;
+}
+
+.light-section {
+    background: #edf4fb;
+}
+
+/* DIMENSI */
+.dimensions {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+.dimension-card {
+    background: white;
+    border: 1px solid #dce7f1;
+    padding: 20px 10px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.dimension-card .symbol {
+    color: #087fc5;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.dimension-card span {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.dimension-card strong {
+    display: block;
+    color: #123b68;
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+/* VARIAN */
+.variant-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.variant-card {
+    background: white;
+    border: 1px solid #dce7f1;
+    border-radius: 13px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(20,50,80,0.06);
+}
+
+.variant-title {
+    background: linear-gradient(90deg, #123b68, #087fc5);
+    color: white;
+    padding: 13px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.variant-body {
+    padding: 18px 22px;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #edf1f5;
+    font-size: 14px;
+}
+
+.spec-row span {
+    color: #536475;
+}
+
+.spec-row strong {
+    color: #172c3d;
+    text-align: right;
+}
+
+.variant-price {
+    background: #eaf3fb;
+    padding: 15px;
+    text-align: center;
+    color: #123b68;
+    font-weight: bold;
+}
+
+.variant-price h3 {
+    color: #087fc5;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* FITUR */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+}
+
+.feature-card {
+    background: white;
+    padding: 23px;
+    border: 1px solid #dce7f1;
+    border-radius: 13px;
+}
+
+.feature-card h3 {
+    color: #087fc5;
+    font-size: 18px;
+    margin-bottom: 9px;
+}
+
+.feature-card p {
+    color: #536475;
+    font-size: 14px;
+}
+
+/* FITUR DETAIL */
+.feature-list {
+    background: white;
+    padding: 25px;
+    border-radius: 13px;
+    border: 1px solid #dce7f1;
+}
+
+.feature-list ul {
+    padding-left: 20px;
+}
+
+.feature-list li {
+    margin: 12px 0;
+    color: #536475;
+    font-size: 15px;
+}
+
+.feature-list strong {
+    color: #172c3d;
+}
+
+/* CTA */
+.cta {
+    background: linear-gradient(110deg, #102d50, #087fc5);
+    color: white;
+    padding: 35px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.cta h2 {
+    font-size: 27px;
+}
+
+.cta p {
+    color: #e5f3ff;
+    font-size: 15px;
+}
+
+.cta .wa-button {
+    background: white;
+    color: #087fc5;
+    white-space: nowrap;
+}
+
+footer {
+    background: #102b45;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    font-size: 13px;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+    .dimensions {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        min-height: 58px;
+        padding: 0 4%;
+    }
+
+    .navbar .brand {
+        font-size: 19px;
+    }
+
+    .navbar .back {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 35px 0;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 17px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .price-container {
+        grid-template-columns: 1fr;
+    }
+
+    .price-card h3 {
+        font-size: 23px;
+    }
+
+    section {
+        padding: 35px 0;
+    }
+
+    .section-title {
+        font-size: 23px;
+    }
+
+    .dimensions {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .dimension-card {
+        padding: 16px 7px;
+    }
+
+    .dimension-card strong {
+        font-size: 15px;
+    }
+
+    .variant-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .variant-body {
+        padding: 15px;
+    }
+
+    .spec-row {
+        font-size: 13px;
+    }
+
+    .cta {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+    }
+
+    .cta h2 {
+        font-size: 22px;
+    }
+
+    .cta .wa-button {
+        white-space: normal;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="byd-seal.html" class="brand">BYD SEAL</a>
+    <a href="index.html" class="back">Kembali ke Beranda</a>
+</nav>
+
+<!-- HEADLINE -->
+<header class="hero">
+    <div class="container">
+
+        <div class="hero-content">
+            <div class="hero-label">SEDAN LISTRIK PREMIUM</div>
+
+            <h1>BYD SEAL</h1>
+
+            <h2>The Ocean Aesthetics Electric Sedan</h2>
+
+            <p class="hero-description">
+                BYD Seal adalah sedan listrik premium dengan teknologi
+                e-Platform 3.0, struktur Cell-to-Body (CTB), dan Blade
+                Battery ultra-aman yang menghadirkan performa tinggi,
+                kenyamanan, serta keamanan berkendara.
+            </p>
+        </div>
+
+        <img src="image/seal.webp"
+             alt="BYD Seal Sedan Listrik Premium">
+
+        <div class="price-container">
+
+            <div class="price-card">
+                <span>BYD SEAL PERFORMANCE</span>
+                <h3>Rp766.000.000</h3>
+                <a class="wa-button"
+                   href="https://wa.me/6289522325077?text=Halo%2C%20saya%20ingin%20konsultasi%20BYD%20Seal%20Performance."
+                   target="_blank">
+                    Konsultasi WhatsApp
+                </a>
+            </div>
+
+            <div class="price-card">
+                <span>BYD SEAL PREMIUM</span>
+                <h3>Rp893.500.000</h3>
+                <a class="wa-button"
+                   href="https://wa.me/6289522325077?text=Halo%2C%20saya%20ingin%20konsultasi%20BYD%20Seal%20Premium."
+                   target="_blank">
+                    Konsultasi WhatsApp
+                </a>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<!-- DIMENSI -->
+<section>
+    <div class="container">
+
+        <h2 class="section-title">Dimensi BYD Seal</h2>
+
+        <p class="section-desc">
+            Desain sedan sporty dengan kabin luas dan proporsi elegan.
+        </p>
+
+        <div class="dimensions">
+
+            <div class="dimension-card">
+                <div class="symbol">↔</div>
+                <span>Panjang</span>
+                <strong>4.800 mm</strong>
+            </div>
+
+            <div class="dimension-card">
+                <div class="symbol">↔</div>
+                <span>Lebar</span>
+                <strong>1.875 mm</strong>
+            </div>
+
+            <div class="dimension-card">
+                <div class="symbol">↕</div>
+                <span>Tinggi</span>
+                <strong>1.460 mm</strong>
+            </div>
+
+            <div class="dimension-card">
+                <div class="symbol">◎</div>
+                <span>Wheelbase</span>
+                <strong>2.920 mm</strong>
+            </div>
+
+            <div class="dimension-card">
+                <div class="symbol">↕</div>
+                <span>Ground Clearance</span>
+                <strong>120 mm</strong>
+            </div>
+
+            <div class="dimension-card">
+                <div class="symbol">♙</div>
+                <span>Kapasitas Penumpang</span>
+                <strong>5 Orang</strong>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- VARIAN -->
+<section class="light-section">
+    <div class="container">
+
+        <h2 class="section-title">Varian & Spesifikasi Performa</h2>
+
+        <p class="section-desc">
+            Pilihan varian dengan performa luar biasa.
+        </p>
+
+        <div class="variant-grid">
+
+            <div class="variant-card">
+
+                <div class="variant-title">
+                    BYD Seal Premium (Extended Range)
+                </div>
+
+                <div class="variant-body">
+
+                    <div class="spec-row">
+                        <span>Tenaga</span>
+                        <strong>313 hp (230 kW)</strong>
+                    </div>
+
+                    <div class="spec-row">
+                        <span>Torsi</span>
+                        <strong>360 Nm</strong>
+                    </div>
+
+                    <div class="spec-row">
+                        <span>Penggerak</span>
+                        <strong>Roda Belakang (RWD)</strong>
+                    </div>
+
+                    <div class="spec-row">
+                        <span>Kapasitas Baterai</span>
+                        <strong>82,56 kWh</strong>
+                    </div>
+
+                    <div class="spec-row">
+                        <span>Jarak Tempuh (NEDC)</span>
+                        <strong>Hingga 650 km</strong>
+                    </div>
+
+                    <div class="spec-row">
+                        <span>Akselerasi 0–100 km/jam</span>
+                        <strong>5,9 detik</strong>
+                    </div>
+
+                </div>
+
+                <div class="variant-price">
+                    Harga OTR
+                    <h3>Rp893.500.000</h3>
+                    <a class="wa-button"
+                       href="https://wa.me/6289522325077?text=Halo%2C%20saya%20ingin%20konsultasi%20BYD%20Seal%20Premium."
+                       target="_blank">
+                        Konsultasi WhatsApp
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="variant-card">
+
+                <div class="variant-title">
+                    BYD Seal Performance AWD
+                </div>
+
+                <div class="variant-body">
+
+                    <div class="spec-row">
+                        <span>Tenaga</span>
+                        <strong>530 hp (390 kW)</strong>
+                    </div>
+
+                    <div class="spec-row">
+                        <span>Torsi</span>
+                        <strong>670 Nm</strong>
+                    </div>
+
+                    <div class="spec-row">
+                        <span>Penggerak</span>
+                        <strong>Semua Roda (AWD)</strong>
+                    </div>
+
+                    <div class="spec-row">
+                        <span>Kapasitas Baterai</span>
+                        <strong>82,56 kWh</strong>
+                    </div>
+
+                    <div class="spec-row">
+                        <span>Jarak Tempuh (NEDC)</span>
+                        <strong>Sekitar 580 km</strong>
+                    </div>
+
+                    <div class="spec-row">
+                        <span>Akselerasi 0–100 km/jam</span>
+                        <strong>3,8 detik</strong>
+                    </div>
+
+                </div>
+
+                <div class="variant-price">
+                    Harga OTR
+                    <h3>Rp766.000.000</h3>
+                    <a class="wa-button"
+                       href="https://wa.me/6289522325077?text=Halo%2C%20saya%20ingin%20konsultasi%20BYD%20Seal%20Performance."
+                       target="_blank">
+                        Konsultasi WhatsApp
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- TEKNOLOGI -->
+<section>
+    <div class="container">
+
+        <h2 class="section-title">Teknologi Unggulan</h2>
+
+        <p class="section-desc">
+            Teknologi canggih untuk pengalaman berkendara terbaik.
+        </p>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>e-Platform 3.0</h3>
+                <p>
+                    Platform khusus kendaraan listrik yang dirancang
+                    untuk mendukung efisiensi, performa, dan kenyamanan.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Cell-to-Body (CTB)</h3>
+                <p>
+                    Teknologi integrasi baterai dengan struktur bodi
+                    kendaraan untuk meningkatkan kekakuan struktur.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Blade Battery</h3>
+                <p>
+                    Teknologi baterai BYD yang dirancang untuk
+                    keamanan, daya tahan, dan efisiensi.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- INTERIOR -->
+<section class="light-section">
+    <div class="container">
+
+        <h2 class="section-title">Interior & Kenyamanan</h2>
+
+        <p class="section-desc">
+            Kabin premium dengan teknologi modern.
+        </p>
+
+        <div class="feature-list">
+            <ul>
+                <li><strong>Layar Sentuh 15,6 Inci</strong> – Layar tengah yang dapat diputar.</li>
+                <li><strong>W-HUD</strong> – Head-Up Display untuk informasi berkendara.</li>
+                <li><strong>Panoramic Sunroof</strong> – Memberikan kesan kabin lebih luas dan terbuka.</li>
+                <li><strong>Dynaudio 12 Speaker</strong> – Sistem audio premium untuk pengalaman suara lebih baik.</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- KEAMANAN -->
+<section>
+    <div class="container">
+
+        <h2 class="section-title">Keamanan & Kendali</h2>
+
+        <p class="section-desc">
+            Teknologi pengendalian dan fitur bantuan berkendara.
+        </p>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>Sistem Suspensi</h3>
+                <p>
+                    Double Wishbone di bagian depan dan Multi-link
+                    di bagian belakang untuk mendukung stabilitas
+                    serta kenyamanan berkendara.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Teknologi iTAC</h3>
+                <p>
+                    Intelligent Torque Adaptation Control membantu
+                    mengoptimalkan distribusi torsi untuk menjaga
+                    kendali kendaraan.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>ADAS & Airbag</h3>
+                <p>
+                    Fitur bantuan pengemudi seperti Adaptive Cruise
+                    Control dan sistem keselamatan dengan 9 SRS Airbags.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PENGISIAN DAYA -->
+<section class="light-section">
+    <div class="container">
+
+        <h2 class="section-title">Pengisian Daya</h2>
+
+        <p class="section-desc">
+            Mendukung pengisian daya cepat dan teknologi listrik modern.
+        </p>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>DC Fast Charging</h3>
+                <p>
+                    Mendukung pengisian daya DC Fast Charging
+                    hingga 150 kW.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Vehicle-to-Load (V2L)</h3>
+                <p>
+                    Dapat memasok daya listrik untuk perangkat
+                    eksternal hingga 3.600W.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Baterai 82,56 kWh</h3>
+                <p>
+                    Kapasitas baterai besar untuk mendukung
+                    perjalanan jarak jauh.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WHATSAPP -->
+<section>
+    <div class="container">
+
+        <div class="cta">
+
+            <div>
+                <h2>Tertarik dengan BYD Seal?</h2>
+                <p>
+                    Hubungi kami untuk konsultasi harga, promo,
+                    simulasi kredit, dan jadwal test drive.
+                </p>
+            </div>
+
+            <a class="wa-button"
+               href="https://wa.me/6289522325077?text=Halo%2C%20saya%20ingin%20konsultasi%20BYD%20Seal."
+               target="_blank">
+                Konsultasi WhatsApp<br>
+                089522325077
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    BYD Seal | Informasi Produk & Penjualan
+</footer>
+
+</body>
+</html>

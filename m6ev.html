@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BYD M6 EV | BYD Bandung</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #172b45;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    padding: 17px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.navbar a {
+    color: #17365d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background: #103b70;
+    color: white;
+    padding: 45px 6%;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.label {
+    display: inline-block;
+    color: #5bd8ee;
+    border: 1px solid #5bd8ee;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    margin-top: 20px;
+}
+
+.hero h2 {
+    color: #45c6e5;
+    font-size: clamp(20px, 3vw, 30px);
+    margin: 10px 0;
+}
+
+.hero p {
+    color: #d9e7f6;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+    margin-top: 28px;
+    border-radius: 14px;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 22px;
+    background: #20b9d5;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 55px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.section-title h2 {
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #77869a;
+    line-height: 1.7;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e5eaf0;
+    border-radius: 14px;
+    padding: 25px 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.04);
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.price {
+    color: #087fc5;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.spec {
+    padding: 13px 0;
+    border-bottom: 1px solid #edf0f4;
+    color: #596a80;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.spec strong {
+    color: #17365d;
+}
+
+.wa-btn {
+    display: block;
+    background: #087fc5;
+    color: white;
+    padding: 14px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 22px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.wa-btn:hover {
+    background: #05639c;
+}
+
+.comparison {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    min-width: 620px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 16px 12px;
+    text-align: center;
+    border-bottom: 1px solid #edf0f4;
+    font-size: 14px;
+}
+
+th {
+    background: #103b70;
+    color: white;
+}
+
+td:first-child {
+    text-align: left;
+    font-weight: bold;
+}
+
+.note {
+    color: #8390a2;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+.highlight {
+    background: white;
+    border-radius: 14px;
+    padding: 30px;
+    line-height: 1.8;
+    margin-top: 30px;
+}
+
+.highlight ul {
+    padding-left: 22px;
+    color: #596a80;
+}
+
+.contact {
+    background: #103b70;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #d9e7f6;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.contact a {
+    display: inline-block;
+    background: #20b9d5;
+    color: white;
+    padding: 14px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #78869a;
+    font-size: 13px;
+}
+
+@media(max-width: 800px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 40px 15px;
+    }
+
+    .hero {
+        padding: 35px 18px;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .comparison {
+        padding: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">BYD</div>
+    <a href="index.html">← Kembali ke Beranda</a>
+</header>
+
+<!-- HEADLINE -->
+
+<section class="hero">
+    <div class="hero-content">
+
+        <span class="label">100% ELECTRIC VEHICLE</span>
+
+        <h1>BYD M6 EV</h1>
+
+        <h2>MOVE FURTHER, DRIVE ELECTRIC</h2>
+
+        <p>
+            MPV listrik untuk keluarga modern.
+            Nikmati kenyamanan berkendara dengan tenaga
+            listrik, pilihan baterai, dan jarak tempuh
+            hingga 600 kilometer.
+        </p>
+
+        <img
+        src="image/m6ev.webp"
+        alt="BYD M6 EV">
+
+        <a href="#tipe" class="hero-btn">
+            LIHAT PILIHAN TIPE →
+        </a>
+
+    </div>
+</section>
+
+<!-- PILIHAN TIPE -->
+
+<section class="container" id="tipe">
+
+    <div class="section-title">
+        <h2>PILIH BYD M6 EV ANDA</h2>
+        <p>Tiga pilihan varian sesuai kebutuhan perjalanan keluarga.</p>
+    </div>
+
+    <div class="products">
+
+        <div class="card">
+
+            <h3>M6 STANDARD</h3>
+
+            <div class="price">Rp405.000.000</div>
+
+            <div class="spec">
+                Jarak tempuh<br>
+                <strong>450 KM</strong>
+            </div>
+
+            <div class="spec">
+                Kapasitas baterai<br>
+                <strong>57,9 kWh</strong>
+            </div>
+
+            <div class="spec">
+                Teknologi<br>
+                <strong>100% Electric</strong>
+            </div>
+
+            <a class="wa-btn"
+            href="https://wa.me/6289522325077?text=Halo%2C%20saya%20tertarik%20BYD%20M6%20EV%20Standard"
+            target="_blank">
+                KONSULTASI BYD M6 EV STANDARD
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <h3>M6 SUPERIOR</h3>
+
+            <div class="price">Rp445.000.000</div>
+
+            <div class="spec">
+                Jarak tempuh<br>
+                <strong>600 KM</strong>
+            </div>
+
+            <div class="spec">
+                Kapasitas baterai<br>
+                <strong>75,6 kWh</strong>
+            </div>
+
+            <div class="spec">
+                Teknologi<br>
+                <strong>100% Electric</strong>
+            </div>
+
+            <a class="wa-btn"
+            href="https://wa.me/6289522325077?text=Halo%2C%20saya%20tertarik%20BYD%20M6%20EV%20Superior"
+            target="_blank">
+                KONSULTASI BYD M6 EV SUPERIOR
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <h3>M6 CAPTAIN SEAT</h3>
+
+            <div class="price">Rp455.000.000</div>
+
+            <div class="spec">
+                Jarak tempuh<br>
+                <strong>600 KM</strong>
+            </div>
+
+            <div class="spec">
+                Kapasitas baterai<br>
+                <strong>75,6 kWh</strong>
+            </div>
+
+            <div class="spec">
+                Teknologi<br>
+                <strong>100% Electric</strong>
+            </div>
+
+            <a class="wa-btn"
+            href="https://wa.me/6289522325077?text=Halo%2C%20saya%20tertarik%20BYD%20M6%20EV%20Captain%20Seat"
+            target="_blank">
+                KONSULTASI BYD M6 EV CAPTAIN SEAT
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PERBANDINGAN -->
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>PERBANDINGAN TIPE BYD M6 EV</h2>
+        <p>Bandingkan spesifikasi utama sebelum menentukan pilihan.</p>
+    </div>
+
+    <div class="comparison">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>SPESIFIKASI</th>
+                    <th>STANDARD</th>
+                    <th>SUPERIOR</th>
+                    <th>CAPTAIN SEAT</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Harga Bandung</td>
+                    <td>Rp405 juta</td>
+                    <td>Rp445 juta</td>
+                    <td>Rp455 juta</td>
+                </tr>
+
+                <tr>
+                    <td>Jarak Tempuh</td>
+                    <td>450 km</td>
+                    <td>600 km</td>
+                    <td>600 km</td>
+                </tr>
+
+                <tr>
+                    <td>Kapasitas Baterai</td>
+                    <td>57,9 kWh</td>
+                    <td>75,6 kWh</td>
+                    <td>75,6 kWh</td>
+                </tr>
+
+                <tr>
+                    <td>Jenis Kendaraan</td>
+                    <td>Electric</td>
+                    <td>Electric</td>
+                    <td>Electric</td>
+                </tr>
+
+                <tr>
+                    <td>7 Kursi</td>
+                    <td>7 dealer</td>
+                    <td>7 dealer</td>
+                    <td>Captain Seat</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <p class="note">
+            Geser tabel ke kanan dan kiri untuk melihat seluruh
+            perbandingan. Spesifikasi dan harga mengacu pada
+            daftar harga Bandung yang diberikan.
+        </p>
+
+    </div>
+
+    <div class="highlight">
+
+        <h2>MENGAPA MEMILIH BYD M6 EV?</h2>
+
+        <ul>
+            <li>100% menggunakan tenaga listrik.</li>
+            <li>Tidak memerlukan bahan bakar bensin.</li>
+            <li>Tersedia pilihan baterai 57,9 kWh dan 75,6 kWh.</li>
+            <li>Jarak tempuh hingga 600 km berdasarkan data harga yang diberikan.</li>
+            <li>Tersedia pilihan Captain Seat untuk kenyamanan penumpang.</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- WHATSAPP -->
+
+<section class="container">
+
+    <div class="contact">
+
+        <h2>TERTARIK DENGAN BYD M6 EV?</h2>
+
+        <p>
+            Konsultasikan harga Bandung, promo,
+            simulasi cicilan, dan jadwalkan test drive.
+        </p>
+
+        <a href="https://wa.me/6289522325077?text=Halo%2C%20saya%20ingin%20konsultasi%20BYD%20M6%20EV"
+        target="_blank">
+            HUBUNGI SALES VIA WHATSAPP
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    BYD Bandung | Ilham Akbar
+    <br>
+    WhatsApp 0895-2232-5077
+</footer>
+
+</body>
+</html>

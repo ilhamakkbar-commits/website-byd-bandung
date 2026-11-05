@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BYD Atto 1 | BYD Bandung</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #17233d;
+}
+
+.navbar {
+    background: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.navbar a {
+    color: #17233d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    padding: 55px 7%;
+    background: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #68758a;
+    line-height: 1.7;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 850px;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #748095;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 28px 22px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid #e9edf3;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 25px;
+    color: #087fc5;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.spec {
+    padding: 12px 0;
+    border-bottom: 1px solid #edf0f4;
+    color: #526078;
+    font-size: 14px;
+}
+
+.wa-btn {
+    display: block;
+    text-align: center;
+    margin-top: 22px;
+    padding: 14px;
+    background: #087fc5;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.wa-btn:hover {
+    background: #05639c;
+}
+
+.comparison {
+    background: white;
+    border-radius: 14px;
+    padding: 25px;
+    overflow-x: auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 16px 12px;
+    text-align: center;
+    border-bottom: 1px solid #edf0f4;
+    font-size: 14px;
+}
+
+th {
+    background: #073b73;
+    color: white;
+}
+
+td:first-child {
+    text-align: left;
+    font-weight: bold;
+}
+
+.note {
+    color: #778397;
+    font-size: 12px;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.contact {
+    background: #073b73;
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+    border-radius: 15px;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact p {
+    margin-bottom: 20px;
+}
+
+.contact a {
+    display: inline-block;
+    background: #13b9d4;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #788398;
+    font-size: 13px;
+}
+
+@media(max-width: 800px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    .navbar {
+        padding: 16px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">BYD</div>
+    <a href="index.html">← Kembali ke Beranda</a>
+</header>
+
+<section class="hero">
+    <h1>BYD ATTO 1</h1>
+    <p>Compact Electric Car. Smart Technology. Modern Lifestyle.</p>
+
+    <img src="image/atto1.webp" alt="BYD Atto 1">
+</section>
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>PILIH TIPE ATTO 1</h2>
+        <p>Tentukan pilihan sesuai kebutuhan dan budget Anda.</p>
+    </div>
+
+    <div class="products">
+
+        <div class="card">
+            <h3>ATTO 1 STANDARD</h3>
+            <div class="price">Rp205.000.000</div>
+
+            <div class="spec">Jarak tempuh: 300 KM</div>
+            <div class="spec">Kapasitas baterai: 30 kWh</div>
+            <div class="spec">Airbag: 2</div>
+            <div class="spec">Layar: 10,1 inci</div>
+            <div class="spec">Kamera belakang</div>
+
+            <a class="wa-btn"
+            href="https://wa.me/6289522325077?text=Halo%2C%20saya%20tertarik%20BYD%20Atto%201%20Standard"
+            target="_blank">
+            TANYA STANDARD
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>ATTO 1 DYNAMIC</h3>
+            <div class="price">Rp216.000.000</div>
+
+            <div class="spec">Jarak tempuh: 300 KM</div>
+            <div class="spec">Kapasitas baterai: 30 kWh</div>
+            <div class="spec">Airbag: 4</div>
+            <div class="spec">Layar: 10,1 inci</div>
+            <div class="spec">Lampu LED</div>
+            <div class="spec">TPMS dan sensor parkir belakang</div>
+
+            <a class="wa-btn"
+            href="https://wa.me/6289522325077?text=Halo%2C%20saya%20tertarik%20BYD%20Atto%201%20Dynamic"
+            target="_blank">
+            TANYA DYNAMIC
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>ATTO 1 PREMIUM</h3>
+            <div class="price">Rp251.000.000</div>
+
+            <div class="spec">Jarak tempuh: 380 KM</div>
+            <div class="spec">Kapasitas baterai: 38,8 kWh</div>
+            <div class="spec">Airbag: 6</div>
+            <div class="spec">Layar: 12,8 inci</div>
+            <div class="spec">Kamera 360 derajat</div>
+            <div class="spec">Wireless charging</div>
+
+            <a class="wa-btn"
+            href="https://wa.me/6289522325077?text=Halo%2C%20saya%20tertarik%20BYD%20Atto%201%20Premium"
+            target="_blank">
+            TANYA PREMIUM
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="container">
+
+    <div class="section-title">
+        <h2>PERBANDINGAN FITUR</h2>
+        <p>Kenali perbedaan setiap tipe BYD Atto 1.</p>
+    </div>
+
+    <div class="comparison">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>FITUR</th>
+                    <th>STANDARD</th>
+                    <th>DYNAMIC</th>
+                    <th>PREMIUM</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Jarak Tempuh</td>
+                    <td>300 KM</td>
+                    <td>300 KM</td>
+                    <td>380 KM</td>
+                </tr>
+
+                <tr>
+                    <td>Baterai</td>
+                    <td>30 kWh</td>
+                    <td>30 kWh</td>
+                    <td>38,8 kWh</td>
+                </tr>
+
+                <tr>
+                    <td>Airbag</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>6</td>
+                </tr>
+
+                <tr>
+                    <td>Lampu Depan</td>
+                    <td>Halogen</td>
+                    <td>LED</td>
+                    <td>LED</td>
+                </tr>
+
+                <tr>
+                    <td>Velg</td>
+                    <td>15 inci steel</td>
+                    <td>16 inci alloy</td>
+                    <td>16 inci alloy</td>
+                </tr>
+
+                <tr>
+                    <td>Kamera</td>
+                    <td>Belakang</td>
+                    <td>Belakang</td>
+                    <td>360°</td>
+                </tr>
+
+                <tr>
+                    <td>TPMS</td>
+                    <td>-</td>
+                    <td>Ya</td>
+                    <td>Ya</td>
+                </tr>
+
+                <tr>
+                    <td>Sensor Parkir Belakang</td>
+                    <td>-</td>
+                    <td>3 radar</td>
+                    <td>3 radar</td>
+                </tr>
+
+                <tr>
+                    <td>Layar Infotainment</td>
+                    <td>10,1 inci</td>
+                    <td>10,1 inci</td>
+                    <td>12,8 inci</td>
+                </tr>
+
+                <tr>
+                    <td>Wireless Charging</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>Ya</td>
+                </tr>
+
+                <tr>
+                    <td>Pengaturan Setir</td>
+                    <td>Tilt</td>
+                    <td>Tilt</td>
+                    <td>Tilt & Telescopic</td>
+                </tr>
+
+                <tr>
+                    <td>Kursi Pengemudi Elektrik</td>
+                    <td>-</td>
+                    <td>6 arah</td>
+                    <td>6 arah</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <p class="note">
+        Catatan: Perbandingan fitur mengacu pada konfigurasi
+        BYD Atto 1 CKD 2026. Pastikan kembali kesesuaian
+        dengan brosur dan unit yang dipasarkan.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="container">
+
+    <div class="contact">
+        <h2>TERTARIK DENGAN BYD ATTO 1?</h2>
+
+        <p>
+        Konsultasikan harga, promo, simulasi cicilan,
+        dan jadwalkan test drive bersama kami.
+        </p>
+
+        <a href="https://wa.me/6289522325077?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20BYD%20Atto%201"
+        target="_blank">
+        HUBUNGI SALES VIA WHATSAPP
+        </a>
+    </div>
+
+</section>
+
+<footer>
+    BYD Bandung | Sales Ilham Akbar
+    <br>
+    WhatsApp 0895-2232-5077
+</footer>
+
+</body>
+</html>
